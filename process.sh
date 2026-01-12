@@ -4,6 +4,8 @@
 cp ~/Munka/HydroCarpath/veablogo.jpg .
 cp ~/Munka/HydroCarpath/ccbyncsa.pdf .
 cp ~/Munka/HydroCarpath/kiado1.pdf .
+cp ~/Munka/HydroCarpath/Hydrocarpath_Program25_final.pdf HydroCarpathProgramme.pdf
+cp -r ~/Munka/HydroCarpath/Posters .
 mkdir Raw
 lowriter --headless --convert-to txt Hydrocarpath2025_Abstracts.docx --outdir ./Raw
 cd Raw
@@ -37,7 +39,6 @@ mv tmp.tex eaabstract.tex
 mkdir PostText
 cd PostText
 csplit --prefix=P --suppress-matched ../Raw/posters.txt '/Article ID: [0-9]*/' '{*}'
-rm P00
 cd ..
 rm posabstract.tex;for i in `ls PostText/P*`; do perl ./abstarct_gen.pl < $i >> posabstract.tex; done
 sed -e "s/ex{Ámon/ex{Amon, Gergely@\\\\'Amon/" posabstract.tex |\
