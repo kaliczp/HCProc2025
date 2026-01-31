@@ -6,6 +6,7 @@ cp ~/Munka/HydroCarpath/ccbyncsa.pdf .
 cp ~/Munka/HydroCarpath/kiado1.pdf .
 cp ~/Munka/HydroCarpath/Hydrocarpath_Program25_final.pdf HydroCarpathProgramme.pdf
 cp -r ~/Munka/HydroCarpath/Posters .
+cp -r ~/Munka/HydroCarpath/ShortArt .
 mkdir Raw
 lowriter --headless --convert-to txt Hydrocarpath2025_Abstracts.docx --outdir ./Raw
 cd Raw
